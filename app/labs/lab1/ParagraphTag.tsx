@@ -28,8 +28,8 @@ export default function ParagraphTag() {
         gap between one paragraph and the next.
       </p>
       <p id="wd-p-your-1">
-        My name is Ramandeep Singh and I am a student at Northeastern
-        University.
+        My name is Ramandeep Singh and I am an MS in Computer Science student at
+        Northeastern University, graduating in April 2027.
       </p>
       <p id="wd-p-your-2">
         In this course I hope to learn how to design, build, and deploy full

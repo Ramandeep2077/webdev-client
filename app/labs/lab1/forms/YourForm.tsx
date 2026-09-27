@@ -140,7 +140,7 @@ export default function YourForm() {
         type="number"
         min={2026}
         max={2032}
-        defaultValue={2028}
+        defaultValue={2027}
       />
       <br />
       <label htmlFor="wd-your-start-date">Program start date:</label>
