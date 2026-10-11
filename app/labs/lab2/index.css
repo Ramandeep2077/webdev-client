@@ -14,7 +14,8 @@
 #wd-lab2 p#wd-id-selector-2 { background: yellow; color: black; }
 #wd-lab2 #wd-id-selector-3 { background: #7070ff; color: white; }
 #wd-lab2 #wd-ai-id-selector { background: purple; color: white; }
-#wd-lab2 .wd-class-selector, #wd-lab2 .wd-your-class { background: yellow; color: blue; }
+#wd-lab2 .wd-class-selector { background-color: yellow; color: blue; }
+#wd-lab2 .wd-your-class { background-color: yellow; color: blue; }
 #wd-lab2 .wd-ai-class-selector { background: #cffafe; color: #155e75; }
 #wd-lab2 .wd-selector-1 .wd-selector-3 { background: red; color: white; }
 #wd-lab2 .wd-selector-2 > .wd-selector-3 > .wd-selector-4 { background: yellow; color: blue; }

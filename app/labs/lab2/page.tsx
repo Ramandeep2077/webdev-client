@@ -28,7 +28,7 @@ export default function Lab2() {
         <p id="wd-ai-id-selector">An additional purple id selector sample.</p>
       </section>
 
-      <section id="wd-css-class-selectors">
+      <div id="wd-css-class-selectors">
         <h3>Class selectors</h3>
         <p className="wd-class-selector">One class can style different element types.</p>
         <h4 className="wd-class-selector">This heading shares the paragraph style.</h4>
@@ -36,7 +36,7 @@ export default function Lab2() {
         <h4 className="wd-your-class">Another element using my class.</h4>
         <p className="wd-ai-class-selector">A second sample class.</p>
         <h4 className="wd-ai-class-selector">The same class can style a heading too.</h4>
-      </section>
+      </div>
 
       <section id="wd-css-document-structure">
         <h3>Document structure selectors</h3>
@@ -60,11 +60,11 @@ export default function Lab2() {
         <p className="wd-fg-color-blue" id="wd-ai-fg">Blue text with <span className="wd-fg-color-black">a black phrase.</span></p>
       </section>
 
-      <section id="wd-css-background-colors">
-        <h2 className="wd-bg-color-blue wd-fg-color-white wd-sample-box">Background color</h2>
-        <p className="wd-bg-color-red wd-fg-color-black wd-sample-box">Red background with <span className="wd-bg-color-green wd-fg-color-white">green background and white text</span>.</p>
-        <p id="wd-ai-bg" className="wd-bg-color-yellow wd-fg-color-black wd-sample-box">Yellow background with readable dark text.</p>
-      </section>
+      <div id="wd-css-background-colors">
+        <h2 className="wd-bg-color-blue wd-fg-color-white">Background color</h2>
+        <p className="wd-bg-color-red wd-fg-color-black">This paragraph has a red background and <span className="wd-bg-color-green wd-fg-color-white">this span has a green background and white text.</span></p>
+        <p id="wd-ai-bg" className="wd-bg-color-yellow wd-fg-color-black">Yellow background with readable dark text.</p>
+      </div>
 
       <section id="wd-css-borders">
         <h2>Borders</h2>
@@ -128,11 +128,14 @@ export default function Lab2() {
           <div className="wd-dimension-landscape wd-bg-color-blue wd-fg-color-white wd-pos-relative-nudge-up-right">Nudged</div>
           <div className="wd-dimension-square wd-bg-color-red">Normal flow</div>
         </div>
-        <h3>Absolute position</h3>
-        <div className="wd-pos-relative wd-bg-color-gray" style={{ height: 180 }}>
-          <div className="wd-pos-absolute-10-10 wd-dimension-portrait wd-bg-color-yellow">Portrait</div>
-          <div className="wd-pos-absolute-50-50 wd-zindex-bring-to-front wd-dimension-landscape wd-bg-color-blue wd-fg-color-white">Landscape</div>
-          <div className="wd-pos-absolute-120-20 wd-dimension-square wd-bg-color-red">Square</div>
+        <div id="wd-css-position-absolute">
+          <h2>Absolute position</h2>
+          <div className="wd-pos-relative" style={{ height: 150 }}>
+            <div className="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">Portrait</div>
+            <div className="wd-pos-absolute-50-50 wd-zindex-bring-to-front wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">Landscape</div>
+            <div className="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">Square</div>
+          </div>
+          <br /><br /><br /><br /><br /><br />
         </div>
         <h3>Fixed position</h3>
         <p>A small fixed badge stays pinned to the viewport.</p>
