@@ -1,43 +1,28 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "../../kambaz.css";
 
 export default function CourseNavigation({ cid }: { cid: string }) {
+  const pathname = usePathname() ?? "";
+  const links = [
+    ["Home", `/courses/${cid}/home`, "wd-course-home-link"],
+    ["Modules", `/courses/${cid}/modules`, "wd-course-modules-link"],
+    ["Piazza", `/courses/${cid}/piazza`, "wd-course-piazza-link"],
+    ["Zoom", `/courses/${cid}/zoom`, "wd-course-zoom-link"],
+    ["Assignments", `/courses/${cid}/assignments`, "wd-course-assignments-link"],
+    ["Quizzes", `/courses/${cid}/quizzes`, "wd-course-quizzes-link"],
+    ["Grades", `/courses/${cid}/grades`, "wd-course-grades-link"],
+    ["People", `/courses/${cid}/people/table`, "wd-course-people-link"],
+  ];
   return (
-    <div id="wd-courses-navigation">
-      <Link href={`/courses/${cid}/home`} id="wd-course-home-link">
-        Home
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/modules`} id="wd-course-modules-link">
-        Modules
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/piazza`} id="wd-course-piazza-link">
-        Piazza
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/zoom`} id="wd-course-zoom-link">
-        Zoom
-      </Link>{" "}
-      <br />
-      <Link
-        href={`/courses/${cid}/assignments`}
-        id="wd-course-assignments-link"
-      >
-        Assignments
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/quizzes`} id="wd-course-quizzes-link">
-        Quizzes
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/grades`} id="wd-course-grades-link">
-        Grades
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/people/table`} id="wd-course-people-link">
-        People
-      </Link>{" "}
-      <br />
+    <div id="wd-courses-navigation" className="list-group wd text-lg">
+      {links.map(([label, href, id]) => (
+        <Link key={id} href={href} id={id} className={`list-group-item border-0 ${pathname === href || pathname.startsWith(`${href}/`) ? "active" : "text-red-600"}`}>
+          {label}
+        </Link>
+      ))}
     </div>
   );
 }

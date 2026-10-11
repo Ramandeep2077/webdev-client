@@ -7,20 +7,22 @@ export default async function AssignmentEditor({
 }) {
   const { cid } = await params;
   return (
-    <div id="wd-assignments-editor">
-      <label htmlFor="wd-name">Assignment Name</label>
+    <div id="wd-assignments-editor" className="max-w-4xl space-y-3">
+      <h1 className="text-2xl font-semibold">Assignment Details</h1>
+      <label className="block font-medium" htmlFor="wd-name">Assignment Name</label>
       <br />
-      <input id="wd-name" defaultValue="A1 - ENV + HTML" />
+      <input id="wd-name" defaultValue="A1 - ENV + HTML" className="w-full rounded border border-neutral-300 px-3 py-2" />
       <br />
       <br />
       <textarea
         id="wd-description"
         cols={50}
         rows={5}
+        className="w-full rounded border border-neutral-300 px-3 py-2"
         defaultValue="The assignment is available online Submit a link to the landing page of your Web application running on Vercel."
       />
       <br />
-      <table>
+      <table className="w-full border-separate border-spacing-y-3">
         <tbody>
           <tr>
             <td align="right" valign="top">
@@ -129,12 +131,14 @@ export default async function AssignmentEditor({
         </tbody>
       </table>
       <hr />
-      <Link href={`/courses/${cid}/assignments`} id="wd-cancel">
+      <div className="flex justify-end gap-2 border-t border-neutral-300 pt-4">
+      <Link href={`/courses/${cid}/assignments`} id="wd-cancel" className="rounded border border-neutral-300 px-4 py-2 text-neutral-800 no-underline">
         Cancel
       </Link>{" "}
-      <Link href={`/courses/${cid}/assignments`} id="wd-save">
+      <Link href={`/courses/${cid}/assignments`} id="wd-save" className="rounded bg-red-600 px-4 py-2 text-white no-underline">
         Save
       </Link>
+      </div>
     </div>
   );
 }

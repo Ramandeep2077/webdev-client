@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Profile() {
   return (
-    <div id="wd-profile-screen">
-      <h3>Profile</h3>
-      <table>
+    <div id="wd-profile-screen" className="max-w-2xl">
+      <h1 className="mb-4 text-2xl font-semibold">Profile</h1>
+      <table className="w-full border-separate border-spacing-y-3">
         <tbody>
           <tr>
             <td align="right">
@@ -93,7 +93,7 @@ export default function Profile() {
           <tr>
             <td></td>
             <td>
-              <Link href="/account/signin">Sign out</Link>
+              <Link href="/account/signin" className="inline-block rounded bg-blue-600 px-3 py-2 text-white no-underline">Sign out</Link>
             </td>
           </tr>
         </tbody>

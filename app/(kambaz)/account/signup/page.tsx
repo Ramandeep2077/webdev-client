@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Signup() {
   return (
-    <div id="wd-signup-screen">
-      <h3>Sign up</h3>
-      <table>
+    <div id="wd-signup-screen" className="max-w-sm">
+      <h1 className="mb-4 text-2xl font-semibold">Sign up</h1>
+      <table className="w-full border-separate border-spacing-y-3">
         <tbody>
           <tr>
             <td align="right">
@@ -49,7 +49,7 @@ export default function Signup() {
           <tr>
             <td></td>
             <td>
-              <Link href="/account/profile">Sign up</Link>
+              <Link href="/account/profile" className="inline-block rounded bg-blue-600 px-3 py-2 text-white no-underline">Sign up</Link>
             </td>
           </tr>
         </tbody>
