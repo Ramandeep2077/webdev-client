@@ -121,7 +121,7 @@ export default function Lab2() {
         <div><span className="wd-display-block wd-bg-color-red">Block 1</span><span className="wd-display-block wd-bg-color-yellow">Block 2</span><span className="wd-display-block wd-bg-color-blue wd-fg-color-white">Block 3</span></div>
       </section>
 
-      <section id="wd-css-positions">
+      <div id="wd-css-positions">
         <h2>Positions and z-index</h2>
         <div className="wd-sample-row">
           <div className="wd-dimension-portrait wd-bg-color-yellow"><div className="wd-pos-relative-nudge-down-right">Relative</div></div>
@@ -132,15 +132,24 @@ export default function Lab2() {
           <h2>Absolute position</h2>
           <div className="wd-pos-relative" style={{ height: 150 }}>
             <div className="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">Portrait</div>
-            <div className="wd-pos-absolute-50-50 wd-zindex-bring-to-front wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">Landscape</div>
+            <div className="wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">Landscape</div>
             <div className="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">Square</div>
+          </div>
+          <br /><br /><br /><br /><br /><br />
+        </div>
+        <div id="wd-z-index">
+          <h2>Z index</h2>
+          <div className="wd-pos-relative" style={{ height: 150 }}>
+            <div className="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">Portrait</div>
+            <div className="wd-zindex-bring-to-front wd-pos-absolute-50-50 wd-dimension-landscape wd-bg-color-blue wd-fg-color-white">Landscape</div>
+            <div className="wd-pos-absolute-120-20 wd-dimension-square wd-bg-color-red">Square</div>
           </div>
           <br /><br /><br /><br /><br /><br />
         </div>
         <h3>Fixed position</h3>
         <p>A small fixed badge stays pinned to the viewport.</p>
         <div className="wd-pos-fixed wd-dimension-square wd-bg-color-blue wd-fg-color-white">Fixed</div>
-      </section>
+      </div>
 
       <section id="wd-float-divs">
         <h2>Float and grid layout</h2>
