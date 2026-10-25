@@ -34,10 +34,11 @@ export default async function ServerInformation() {
       <p>Server architecture: {serverInfo.arch}</p>
       <h3>Files read on the server</h3>
       <ul>
-        {files.map((file, index) => (
-          <li key={file}>{file} ({contents[index].length} characters)</li>
+        {files.map((file) => (
+          <li key={file}>{file}</li>
         ))}
       </ul>
+      <p>Read {contents.length} files on the server.</p>
     </div>
   );
 }

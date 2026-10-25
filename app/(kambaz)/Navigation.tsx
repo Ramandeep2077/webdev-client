@@ -13,7 +13,7 @@ export default function KambazNavigation() {
   const items = [
     { label: "Account", href: "/account", id: "wd-account-link", icon: FaRegCircleUser, active: false },
     { label: "Dashboard", href: "/dashboard", id: "wd-dashboard-link", icon: AiOutlineDashboard, active: pathname === "/dashboard" },
-    { label: "Courses", href: courseMatch ? `/courses/${courseMatch[1]}/home` : "/dashboard", id: "wd-course-link", icon: LiaBookSolid, active: Boolean(courseMatch) },
+    { label: "Courses", href: "/courses", id: "wd-course-link", icon: LiaBookSolid, active: pathname === "/courses" || Boolean(courseMatch) },
     { label: "Calendar", href: "/calendar", id: "wd-calendar-link", icon: IoCalendarOutline, active: false },
     { label: "Inbox", href: "/inbox", id: "wd-inbox-link", icon: FaInbox, active: false },
     { label: "Labs", href: "/labs", id: "wd-labs-link", icon: LiaCogSolid, active: false },
