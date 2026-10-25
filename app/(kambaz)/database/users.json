@@ -1,0 +1,8 @@
+[
+  { "_id": "u1", "firstName": "Tony", "lastName": "Stark", "loginId": "001234561S", "section": "S101", "lastActivity": "2026-10-20", "totalActivity": "10:21:32" },
+  { "_id": "u2", "firstName": "Bruce", "lastName": "Wayne", "loginId": "001234562S", "section": "S101", "lastActivity": "2026-10-21", "totalActivity": "23:32:23" },
+  { "_id": "u3", "firstName": "Steve", "lastName": "Rogers", "loginId": "001234563S", "section": "S102", "lastActivity": "2026-10-19", "totalActivity": "13:21:32" },
+  { "_id": "u4", "firstName": "Natasha", "lastName": "Romanoff", "loginId": "001234564S", "section": "S201", "lastActivity": "2026-10-22", "totalActivity": "11:22:33" },
+  { "_id": "u5", "firstName": "Jane", "lastName": "Sample", "loginId": "001234565S", "section": "S201", "lastActivity": "2026-10-23", "totalActivity": "08:14:20" },
+  { "_id": "u6", "firstName": "Alex", "lastName": "Sample", "loginId": "001234566S", "section": "S301", "lastActivity": "2026-10-24", "totalActivity": "09:30:12" }
+]

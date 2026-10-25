@@ -1,0 +1,5 @@
+[
+  { "_id": "1234", "name": "CS1234 React JS", "subtitle": "Full Stack software developer", "image": "/images/reactjs.jpg", "term": "Fall 2026" },
+  { "_id": "2345", "name": "CS2345 Node JS", "subtitle": "Server side JavaScript", "image": "/images/nodejs.jpg", "term": "Fall 2026" },
+  { "_id": "3456", "name": "CS3456 MongoDB", "subtitle": "NoSQL Databases", "image": "/images/mongodb.jpg", "term": "Fall 2026" }
+]

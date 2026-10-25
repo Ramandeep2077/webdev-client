@@ -1,10 +1,12 @@
-import Modules from "../modules/page";
+import CourseModules from "../modules/CourseModules";
 import CourseStatus from "./Status";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ cid: string }> }) {
+  const { cid } = await params;
+
   return (
     <div id="wd-home" className="flex gap-4">
-      <div className="min-w-0 flex-1"><Modules /></div>
+      <div className="min-w-0 flex-1"><CourseModules cid={cid} /></div>
       <div className="hidden w-[250px] shrink-0 lg:block"><CourseStatus /></div>
     </div>
   );

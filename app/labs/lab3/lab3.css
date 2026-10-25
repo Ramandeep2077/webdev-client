@@ -1,0 +1,74 @@
+.lab3 {
+  max-width: 960px;
+  padding: 1rem;
+  color: #202124;
+}
+
+.lab3 h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.lab3 section {
+  margin-block: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.lab3 section h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+
+.lab3 section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lab3 pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #f3f4f6;
+  font-size: 0.875rem;
+}
+
+.lab3 table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.lab3 th,
+.lab3 td {
+  min-width: 12rem;
+  padding: 0.55rem;
+  border: 1px solid #d1d5db;
+}
+
+.lab3 th {
+  background: #f3f4f6;
+}
+
+.lab3-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lab3-box {
+  display: grid;
+  width: 7rem;
+  min-height: 4rem;
+  place-items: center;
+  border: 1px solid #9ca3af;
+  font-weight: 600;
+}
+
+.box-blue { background: #bfdbfe; }
+.box-green { background: #bbf7d0; }
+.box-red { background: #fecaca; }
+.box-gold { background: #fde68a; }
+.box-teal { background: #99f6e4; }
+.box-rose { background: #fbcfe8; }

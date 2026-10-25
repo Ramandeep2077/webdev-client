@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Review JavaScript conditionals", "completed": true },
+  { "id": 2, "title": "Practice mapping over arrays", "completed": false },
+  { "id": 3, "title": "Build a reusable React component", "completed": false },
+  { "id": 4, "title": "Explore dynamic route parameters", "completed": false }
+]

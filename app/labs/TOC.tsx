@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function TOC() {
+  const pathname = usePathname() ?? "";
+  const labs = [
+    ["Lab 1", "/labs/lab1"],
+    ["Lab 2", "/labs/lab2"],
+    ["Lab 3", "/labs/lab3"],
+    ["Lab 4", "/labs/lab4"],
+    ["Lab 5", "/labs/lab5"],
+  ];
+
   return (
     <div id="wd-toc">
       <p>
@@ -14,23 +26,19 @@ export default function TOC() {
             Home
           </Link>
         </li>
+        {labs.map(([label, href]) => (
+          <li key={href}>
+            <Link
+              href={href}
+              aria-current={pathname.startsWith(href) ? "page" : undefined}
+              className={pathname.startsWith(href) ? "font-semibold text-red-700 underline" : "text-neutral-700"}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
         <li>
-          <Link href="/labs/lab1">Lab 1</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab2">Lab 2</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab3">Lab 3</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab4">Lab 4</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab5">Lab 5</Link>
-        </li>
-        <li>
-          <Link href="/" id="wd-kambaz-link">
+          <Link href="/dashboard" id="wd-kambaz-link">
             Kambaz
           </Link>
         </li>

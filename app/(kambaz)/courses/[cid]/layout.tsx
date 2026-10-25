@@ -1,4 +1,7 @@
 import { ReactNode } from "react";
+import { notFound } from "next/navigation";
+import { getCourse } from "../../database";
+import CourseHeading from "./CourseHeading";
 import CourseNavigation from "./Navigation";
 
 export default async function CoursesLayout({
@@ -9,9 +12,12 @@ export default async function CoursesLayout({
   params: Promise<{ cid: string }>;
 }>) {
   const { cid } = await params;
+  const course = getCourse(cid);
+  if (!course) notFound();
+
   return (
     <div id="wd-courses" className="min-w-0">
-      <h2 className="mb-2 text-xl font-semibold">Courses {cid}</h2>
+      <CourseHeading courseName={course.name} />
       <hr className="mb-4 border-neutral-300" />
       <div className="flex gap-4">
         <div className="hidden w-[140px] shrink-0 md:block"><CourseNavigation cid={cid} /></div>

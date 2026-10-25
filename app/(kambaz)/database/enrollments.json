@@ -1,0 +1,9 @@
+[
+  { "_id": "e1", "user": "u1", "course": "1234", "role": "STUDENT" },
+  { "_id": "e2", "user": "u2", "course": "1234", "role": "STUDENT" },
+  { "_id": "e3", "user": "u3", "course": "1234", "role": "TA" },
+  { "_id": "e4", "user": "u3", "course": "2345", "role": "STUDENT" },
+  { "_id": "e5", "user": "u4", "course": "2345", "role": "STUDENT" },
+  { "_id": "e6", "user": "u5", "course": "2345", "role": "STUDENT" },
+  { "_id": "e7", "user": "u6", "course": "3456", "role": "STUDENT" }
+]

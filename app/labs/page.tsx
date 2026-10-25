@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { courses } from "../(kambaz)/database";
 
 export default function Labs() {
   return (
@@ -43,10 +44,29 @@ export default function Labs() {
           </Link>
         </li>
         <li>
-          <Link href="/" id="wd-kambaz-link">
-            Kambaz
+          <Link href="/dashboard" id="wd-kambaz-link">
+            Kambaz Dashboard
           </Link>
         </li>
+      </ul>
+      <h2>Kambaz Screens</h2>
+      <ul>
+        <li><Link href="/dashboard">Dashboard</Link></li>
+        {courses.map((course) => (
+          <li key={course._id}>
+            {course.name}: {[
+              ["Home", "home"],
+              ["Modules", "modules"],
+              ["Assignments", "assignments"],
+              ["People", "people/table"],
+            ].map(([label, path], index) => (
+              <span key={path}>
+                {index > 0 ? " | " : ""}
+                <Link href={`/courses/${course._id}/${path}`}>{label}</Link>
+              </span>
+            ))}
+          </li>
+        ))}
       </ul>
     </div>
   );

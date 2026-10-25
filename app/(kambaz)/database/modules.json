@@ -1,0 +1,7 @@
+[
+  { "_id": "mod-1234-1", "course": "1234", "name": "Week 1: React Foundations", "lessons": [{ "title": "LEARNING OBJECTIVES", "items": ["Understand component-based interfaces", "Create a React application"] }, { "title": "READING", "items": ["Chapter 1: Introduction", "Chapter 2: React Components"] }, { "title": "SLIDES", "items": ["React and JSX", "Props and composition"] }] },
+  { "_id": "mod-1234-2", "course": "1234", "name": "Week 2: State and Events", "lessons": [{ "title": "LEARNING OBJECTIVES", "items": ["Respond to user events", "Manage component state"] }, { "title": "READING", "items": ["Chapter 3: JavaScript and React"] }] },
+  { "_id": "mod-2345-1", "course": "2345", "name": "Week 1: Node.js Runtime", "lessons": [{ "title": "LEARNING OBJECTIVES", "items": ["Describe the Node.js runtime", "Use built-in Node modules"] }, { "title": "READING", "items": ["Chapter 4: Server-side JavaScript"] }] },
+  { "_id": "mod-2345-2", "course": "2345", "name": "Week 2: Express APIs", "lessons": [{ "title": "LEARNING OBJECTIVES", "items": ["Define REST endpoints", "Return JSON responses"] }, { "title": "LAB", "items": ["Build an Express REST API"] }] },
+  { "_id": "mod-3456-1", "course": "3456", "name": "Week 1: Document Databases", "lessons": [{ "title": "LEARNING OBJECTIVES", "items": ["Explore document data", "Model collections and documents"] }] }
+]

@@ -1,0 +1,7 @@
+[
+  { "_id": "a1-react", "course": "1234", "title": "A1 - React Components", "description": "Build a component-based course interface and submit its public URL.", "points": 100, "dueDate": "2026-11-08", "details": "Week 1 | Available now | Due Nov 8 at 11:59pm | 100 pts" },
+  { "_id": "a2-react", "course": "1234", "title": "A2 - CSS and Tailwind", "description": "Style a responsive application using CSS and Tailwind.", "points": 100, "dueDate": "2026-11-15", "details": "Week 2 | Available now | Due Nov 15 at 11:59pm | 100 pts" },
+  { "_id": "a1-node", "course": "2345", "title": "A1 - Node Fundamentals", "description": "Create a small application using Node.js modules.", "points": 80, "dueDate": "2026-11-10", "details": "Week 1 | Available now | Due Nov 10 at 11:59pm | 80 pts" },
+  { "_id": "a2-node", "course": "2345", "title": "A2 - Express REST API", "description": "Implement and document an Express REST API.", "points": 100, "dueDate": "2026-11-17", "details": "Week 2 | Available now | Due Nov 17 at 11:59pm | 100 pts" },
+  { "_id": "a1-mongo", "course": "3456", "title": "A1 - MongoDB Data Model", "description": "Design a document model for a small application.", "points": 75, "dueDate": "2026-11-12", "details": "Week 1 | Available now | Due Nov 12 at 11:59pm | 75 pts" }
+]
