@@ -38,6 +38,7 @@ export default function KambazNavigation() {
           id={id}
           aria-current={active ? "page" : undefined}
           className={`block py-3 text-center text-sm no-underline ${active ? "active bg-white text-red-700" : "bg-black text-white"}`}
+          style={active ? { backgroundColor: "#ffffff", color: "#b91c1c", fontWeight: 600 } : { backgroundColor: "#000000", color: "#ffffff" }}
           data-active={active ? "true" : undefined}
         >
           <Icon className={`inline-block text-3xl ${active ? "text-red-700" : "text-red-600"}`} />
