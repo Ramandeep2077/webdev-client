@@ -1,9 +1,7 @@
-import { readFile } from "node:fs/promises";
-import { arch } from "node:os";
-import { join } from "node:path";
 import Link from "next/link";
 import todos from "./todos.json";
 import Pathname from "./Pathname";
+import ServerInformation from "./ServerInformation";
 import "./lab3.css";
 import DefaultMath from "./math-default";
 import * as NamespaceMath from "./math-namespace";
@@ -17,24 +15,11 @@ const house = {
 
 const bgGreen = { backgroundColor: "lightgreen" };
 
-const sampleFiles = [
-  "app/labs/lab3/page.tsx",
-  "app/labs/lab3/lab3.css",
-  "app/labs/lab3/todos.json",
-];
-
 function Add({ a, b }: { a: number; b: number }) {
-  return <p>{a} + {b} = {a + b}</p>;
+  return <p>a + b = {a + b}</p>;
 }
 
 export default async function Lab3() {
-  const fileContents = await Promise.all(
-    [
-      readFile(join(process.cwd(), "app/labs/lab3/page.tsx"), "utf8"),
-      readFile(join(process.cwd(), "app/labs/lab3/lab3.css"), "utf8"),
-      readFile(join(process.cwd(), "app/labs/lab3/todos.json"), "utf8"),
-    ],
-  );
   const hour = 9;
   const nullValue: string | null = null;
   const garageCars = (house as typeof house & { garage?: { cars: number } }).garage?.cars ?? 0;
@@ -93,12 +78,10 @@ export default async function Lab3() {
           <div className="lab3-box" style={bgGreen}>bgGreen</div>
         </div>
       </section>
-      <section><h2>3.7 Client Component: Pathname</h2><Pathname /></section>
       <section>
-        <h2>Server Information</h2>
-        <p>arch: {arch()}</p>
-        <h3>Files read on the server</h3>
-        <ul>{fileContents.map((content, index) => <li key={sampleFiles[index]}>{sampleFiles[index]} ({content.length} characters)</li>)}</ul>
+        <h2>3.7 Client and Server Components</h2>
+        <Pathname />
+        <ServerInformation />
       </section>
       <section>
         <h2>3.8 Path Parameters</h2>
