@@ -19,6 +19,14 @@ export default function TOC() {
         <strong>Ramandeep Singh</strong>
         <br />
         <em>Build it, break it, learn it.</em>
+        <br />
+        <a
+          href="https://github.com/Ramandeep2077/webdev-client"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub repository
+        </a>
       </p>
       <ul>
         <li>

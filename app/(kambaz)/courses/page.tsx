@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
-import { courses } from "../database";
+import { useKambazStore } from "../store/useKambazStore";
 
 export default function Courses() {
+  const courses = useKambazStore((state) => state.courses);
+
   return (
     <main id="wd-courses-index">
       <h1 className="mb-4 text-2xl font-semibold">Courses</h1>

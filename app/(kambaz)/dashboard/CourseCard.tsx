@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { courses } from "../database";
+import type { Course } from "../store/useKambazStore";
 
 export default function CourseCard({
   course,
+  onEdit,
+  onDelete,
 }: {
-  course: (typeof courses)[number];
+  course: Course;
+  onEdit: (course: Course) => void;
+  onDelete: () => void;
 }) {
   return (
     <div className="wd-dashboard-course w-[300px] max-w-full overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm">
@@ -17,6 +21,10 @@ export default function CourseCard({
           <button type="button" className="inline-flex items-center justify-center rounded bg-blue-600 px-3 py-1.5 text-sm font-medium text-white">Go</button>
         </div>
       </Link>
+      <div className="flex gap-2 border-t border-neutral-200 p-3">
+        <button type="button" onClick={() => onEdit(course)} aria-label={`Edit ${course.name}`} className="rounded border border-neutral-300 px-3 py-1 text-sm">Edit</button>
+        <button type="button" onClick={onDelete} aria-label={`Delete ${course.name}`} className="rounded border border-red-300 px-3 py-1 text-sm text-red-700">Delete</button>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,15 @@
+"use client";
+
 import Module from "./Module";
 import Lesson from "./Lesson";
-import { getModulesForCourse } from "../../../database";
+import { useKambazStore } from "../../../store/useKambazStore";
 
 export default function CourseModules({ cid }: { cid: string }) {
-  const courseModules = getModulesForCourse(cid);
+  const modules = useKambazStore((state) => state.modules);
+  const courseModules = modules.filter((module) => module.course === cid);
+  const addModule = useKambazStore((state) => state.addModule);
+  const updateModule = useKambazStore((state) => state.updateModule);
+  const deleteModule = useKambazStore((state) => state.deleteModule);
 
   return (
     <div>
@@ -13,11 +19,16 @@ export default function CourseModules({ cid }: { cid: string }) {
         <select defaultValue="publish-all" className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm">
           <option value="publish-all">Publish All</option>
         </select>
-        <button type="button" className="rounded border border-red-600 bg-red-600 px-3 py-1.5 text-sm font-medium text-white">+ Module</button>
+        <button type="button" onClick={() => addModule(cid)} className="rounded border border-red-600 bg-red-600 px-3 py-1.5 text-sm font-medium text-white">+ Module</button>
       </div>
       <ul id="wd-modules" className="m-0 list-none p-0">
         {courseModules.map((module) => (
-          <Module key={module._id} title={module.name}>
+          <Module
+            key={module._id}
+            title={module.name}
+            onRename={(name) => updateModule(module._id, name)}
+            onDelete={() => deleteModule(module._id)}
+          >
             {module.lessons.map((lesson) => (
               <Lesson key={`${module._id}-${lesson.title}`} title={lesson.title}>
                 {lesson.items.map((item) => (
