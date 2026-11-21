@@ -3,13 +3,19 @@
 import Module from "./Module";
 import Lesson from "./Lesson";
 import { useKambazStore } from "../../../store/useKambazStore";
+import { useEffect } from "react";
 
 export default function CourseModules({ cid }: { cid: string }) {
+  const fetchModules = useKambazStore((state) => state.fetchModules);
   const modules = useKambazStore((state) => state.modules);
   const courseModules = modules.filter((module) => module.course === cid);
   const addModule = useKambazStore((state) => state.addModule);
   const updateModule = useKambazStore((state) => state.updateModule);
   const deleteModule = useKambazStore((state) => state.deleteModule);
+
+  useEffect(() => {
+    void fetchModules(cid);
+  }, [cid, fetchModules]);
 
   return (
     <div>

@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 
 export default function TOC() {
   const pathname = usePathname() ?? "";
+  const server = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:4000";
+  const serverUrl = server.replace(/\/$/, "");
   const labs = [
     ["Lab 1", "/labs/lab1"],
     ["Lab 2", "/labs/lab2"],
@@ -49,6 +51,20 @@ export default function TOC() {
           <Link href="/dashboard" id="wd-kambaz-link">
             Kambaz
           </Link>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Ramandeep2077/webdev-server"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Server GitHub
+          </a>
+        </li>
+        <li>
+          <a href={serverUrl} target="_blank" rel="noreferrer">
+            Deployed Server
+          </a>
         </li>
         <li>
           <Link href="/book/ch1" id="wd-toc-book-link">

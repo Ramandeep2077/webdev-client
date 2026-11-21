@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import CourseCard from "./CourseCard";
 import { useKambazStore, type CourseInput } from "../store/useKambazStore";
 
@@ -13,11 +13,16 @@ const emptyCourse: CourseInput = {
 
 export default function Dashboard() {
   const courses = useKambazStore((state) => state.courses);
+  const fetchCourses = useKambazStore((state) => state.fetchCourses);
   const addCourse = useKambazStore((state) => state.addCourse);
   const updateCourse = useKambazStore((state) => state.updateCourse);
   const deleteCourse = useKambazStore((state) => state.deleteCourse);
   const [form, setForm] = useState<CourseInput>(emptyCourse);
   const [editingId, setEditingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    void fetchCourses();
+  }, [fetchCourses]);
 
   function submitCourse(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
